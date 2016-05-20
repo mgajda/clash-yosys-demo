@@ -1,5 +1,7 @@
 *~
 verilog/
+demo.blif
+demo.txt
 *.hi
 *.o
 Demo
