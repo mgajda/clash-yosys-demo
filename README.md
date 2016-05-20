@@ -42,7 +42,7 @@ Installing toolchain:
         ```bash
         git clone https://github.com/cseed/arachne-pnr.git arachne-pnr
         cd arachne-pnr
-        make -j$(nproc) -DDEST_DIR=$HOME/icestorm
+        make -j$(nproc) -DDEST_DIR=$HOME/icestorm -DICEBOX=$HOME/icestorm/share/icebox/
         make install
         ```
         
