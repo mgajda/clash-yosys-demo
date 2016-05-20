@@ -19,7 +19,7 @@ demo.blif: verilog/Main/Main_topEntity.v
 	(cd verilog/Main; yosys -p "synth_ice40 -blif ../../demo.blif" $$(ls *.v|grep -v Main_testBench.v))
 
 demo.txt: demo.blif
-	arachne-pnr -d 1k -p demo.pcf demo.blif -o demo.txt
+	arachne-pnr -d 1k -p icestick.pcf demo.blif -o demo.txt
 
 demo.bin: demo.txt
 	icepack demo.txt demo.bin
