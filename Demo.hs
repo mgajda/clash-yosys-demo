@@ -54,6 +54,16 @@ counter' limit = (fsm <^> 0) $ signal ()
     fsm st () | limit == st = (0,    True)
               | otherwise   = (st+1, False)
 
+{-# ANN topEntity
+  (defTop
+    { t_name     = "blinker"
+    , t_inputs   = []
+    , t_outputs  = ["LED"]
+    , t_extraIn  = [ ("CLK", 1)
+                   ]
+    , t_clocks   = [
+                   ]
+    }) #-}
 -- | Top entity to implement
 topEntity :: Signal Word5
 topEntity  = secondsCounter

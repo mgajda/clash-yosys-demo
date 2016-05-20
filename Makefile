@@ -12,11 +12,11 @@ clean:
 Demo: Demo.hs
 	clash Demo.hs
 
-verilog/Main/Main_topEntity.v: Demo.hs
+verilog/Main/blinker.v: Demo.hs
 	echo ":verilog" | clash --interactive Demo.hs
 
-demo.blif: verilog/Main/Main_topEntity.v
-	(cd verilog/Main; yosys -p "synth_ice40 -blif ../../demo.blif" $$(ls *.v|grep -v Main_testBench.v))
+demo.blif: verilog/Main/blinker.v
+	(cd verilog/Main; yosys -p "synth_ice40 -blif ../../demo.blif" $$(ls *.v|grep -v testbench.v))
 
 demo.txt: demo.blif
 	arachne-pnr -d 1k -p icestick.pcf demo.blif -o demo.txt
