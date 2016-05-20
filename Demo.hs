@@ -58,18 +58,25 @@ counter' limit = (fsm <^> 0) $ signal ()
   (defTop
     { t_name     = "blinker"
     , t_inputs   = []
-    , t_outputs  = ["LED"]
+    , t_outputs  = ["LED1", "LED2", "LED3", "LED4", "LED5"]
     , t_extraIn  = [ ("CLK", 1)
                    ]
     , t_clocks   = [
                    ]
     }) #-}
 -- | Top entity to implement
-topEntity :: Signal Word5
-topEntity  = secondsCounter
+topEntity :: Signal (Bit, Bit, Bit, Bit, Bit)
+topEntity  = unpak <$> secondsCounter
   where
     secondPulse         = counter'   fpgaFrequency
     (secondsCounter, _) = counter (2^5) secondPulse
+
+unpak :: Word5 -> (Bit, Bit, Bit, Bit, Bit)
+unpak w = (w!0
+          ,w!1
+          ,w!2
+          ,w!3
+          ,w!4)
 
 -- * Here are helpers for simulation.
 -- | Takes every nth step of simulated signal.

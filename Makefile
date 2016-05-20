@@ -13,7 +13,7 @@ Demo: Demo.hs
 	clash Demo.hs
 
 verilog/Main/blinker.v: Demo.hs
-	echo ":verilog" | clash --interactive Demo.hs
+	clash --verilog Demo.hs
 
 demo.blif: verilog/Main/blinker.v
 	(cd verilog/Main; yosys -p "synth_ice40 -blif ../../demo.blif" $$(ls *.v|grep -v testbench.v))

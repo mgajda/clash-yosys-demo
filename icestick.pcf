@@ -1,7 +1,7 @@
-set_io LED[1] 99
-set_io LED[2] 98
-set_io LED[3] 97
-set_io LED[4] 96
-set_io LED[5] 95
-set_io CLK    21
+set_io LED1 99
+set_io LED2 98
+set_io LED3 97
+set_io LED4 96
+set_io LED5 95
+set_io CLK  21
 
