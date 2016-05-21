@@ -20,8 +20,8 @@ This demo uses fully open source toolchain:
   * [IceStorm](http://www.clifford.at/icestorm/) toolchain in order to generate FPGA bitstream and upload it
     into [Lattice IceStick](http://latticesemi.com/iCEstick) device.
 
-This project can be cloned and used as a project template for your own experiments
-with Haskell and FPGAs.
+_This project used as a *project template* for your own experiments
+with Haskell and FPGAs._ In this case, please remove `README.md` file after cloning.
 
 This one uses a single counter to show a binary stopwatch with a range of 2⁵ seconds.
 
