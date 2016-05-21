@@ -140,4 +140,6 @@ It would be nice to wrap Ice40 PLL configuration as a custom block:
 * Wrapping of custom blocks in CλaSH code is
   [described in this documentation](http://hackage.haskell.org/package/clash-prelude-0.7.5/docs/CLaSH-Tutorial.html#g:13).
 
-* Unfortunately making it work requires some [change in the way CλaSH handles clock annotations](https://github.com/clash-lang/clash-compiler/issues/145). 
+* Unfortunately making it work requires some [change in the way CλaSH handles clock annotations](https://github.com/clash-lang/clash-compiler/issues/145).
+
+_Until then one needs to change Verilog code by themselves, asserting `1` for `system1000_rstn`_
