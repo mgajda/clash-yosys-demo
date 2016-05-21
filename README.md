@@ -1,22 +1,21 @@
-Blinking LEDs
-=============
+Haskell deployed using fully open source toolchain to iCE40
+===========================================================
 
 This is a simple demo for compiling of [Haskell](http://www.haskell.org)
 code into FPGA configuration.
 
-_Field Programmable Gate Arrays_ (FPGAs) are
+[_Field Programmable Gate Arrays_](https://en.wikipedia.org/wiki/Field-programmable_gate_array) (FPGAs) are
 a cheap and fast tool for prototyping hardware descriptions that can be
 later used for creating chips.
 
-_Haskell_ is a lazy functional programming language,
+[_Haskell_](http://www.haskell.org) is a lazy functional programming language,
 which lends itself readily to both very high level descriptions of software,
 and very low level descriptions of hardware, due its solid mathematical underpinnings.
 
 This demo uses fully open source toolchain:
 
   * [CλaSH](http://www.clash-lang.org/) for compiling Haskell into Verilog,
-  * [Yosys]() Verilog compiler to compile Verilog code into `.blif` format,
-  * 
+  * [Yosys](http://www.clifford.at/yosys/) [Verilog](https://en.wikipedia.org/wiki/Verilog) compiler to compile Verilog code into `.blif` format,
   * [Arachne Place-N-Route](https://github.com/cseed/arachne-pnr) to perform routing onto the _Lattice ICE40 H1K_ device,
   * [IceStorm](http://www.clifford.at/icestorm/) toolchain in order to generate FPGA bitstream and upload it
     into [Lattice IceStick](http://latticesemi.com/iCEstick) device.
