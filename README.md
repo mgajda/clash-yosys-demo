@@ -36,7 +36,15 @@ Installing toolchain:
         make -j4	-DPREFIX=$HOME/icestorm
         make		-DPREFIX=$HOME/icestorm install
         ```
-        
+
+        For Linux you also might want to enable write access through FTDI USB device:
+
+        ```
+        cat - <<EOF > /etc/udev/rules.d/53-lattice-ftdi.rules
+        ACTION=="add", ATTR{idVendor}=="0403", ATTR{idProduct}=="6010", MODE:="666"
+        EOF
+        ```
+    
     * [Arachne PNR](https://github.com/cseed/arachne-pnr) tool:
 
         ```bash
@@ -115,6 +123,7 @@ While there will be Makefile, you might want to look through the build process s
     ```
     iceprog demo.bin
     ```
+    NOTE: If you forgot to add the relevant udev rule, you might need to use `sudo` here.
 
 Or use `Makefile`:
 

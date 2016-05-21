@@ -59,11 +59,11 @@ counter' limit = (fsm <^> 0) $ signal ()
     { t_name     = "blinker"
     , t_inputs   = []
     , t_outputs  = ["LED1", "LED2", "LED3", "LED4", "LED5"]
-    , t_extraIn  = [ ("CLK", 1)
-                   ]
+    , t_extraIn  = []
     , t_clocks   = [
                    ]
     }) #-}
+
 -- | Top entity to implement
 topEntity :: Signal (Bit, Bit, Bit, Bit, Bit)
 topEntity  = unpak <$> secondsCounter
