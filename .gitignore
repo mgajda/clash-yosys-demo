@@ -2,6 +2,7 @@
 verilog/
 demo.blif
 demo.txt
+demo.bin
 *.hi
 *.o
 Demo
