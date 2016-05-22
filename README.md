@@ -68,7 +68,7 @@ Installing toolchain:
         make            -DPREFIX=$HOME/icestorm install
         ```
 2. [CλaSH](http://www.clash-lang.org/) compiler based on [GHC](https://www.haskell.org/ghc/):
-    * To install GHC and Cabalon Linux:
+    * To install GHC and Cabal on Linux:
 
         ```
         apt-get install ghc cabal-install
