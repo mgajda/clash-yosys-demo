@@ -73,7 +73,9 @@ Installing toolchain:
         ```
         apt-get install ghc cabal-install
         ```
-    * To install GHC on Windows it is recommended to either use `.msi` package of Haskell Platform or Stack installation utility.
+    * To install GHC on Windows it is recommended to either use `.msi` package
+      of [Haskell Platform](https://www.haskell.org/platform/)
+      or [Stack](http://docs.haskellstack.org/en/stable/README/) installation utility.
     * From within this environment, use `cabal-install` to setup `clash-ghc` package:
 
         ```bash
