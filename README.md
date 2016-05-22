@@ -61,7 +61,10 @@ Installing toolchain:
         make -j$(nproc) -DPREFIX=$HOME/icestorm
         make            -DPREFIX=$HOME/icestorm install
         ```
-        
+    Note that latest Ubuntu already has necessary packages: 
+    ```
+    sudo apt-get install -y fpga-icestorm yosys arachne-pnr
+    ```
 2. [CλaSH](http://www.clash-lang.org/) compiler based on [GHC](https://www.haskell.org/ghc/):
     * To install GHC and Cabalon Linux:
 
