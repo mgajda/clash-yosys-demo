@@ -28,6 +28,12 @@ This one uses a single counter to show a binary stopwatch with a range of 2⁵ s
 Installing toolchain:
 ---------------------
 1. First install the [IceStorm](http://www.clifford.at/icestorm/) toolchain:
+    On the latest _Ubuntu_ you may install from the repository: 
+    ```
+    sudo apt-get install -y fpga-icestorm yosys arachne-pnr
+    ```
+
+    Otherwise you might compile from the latest source:
     * IceStorm utilities themselves:
 
         ```bash
@@ -61,10 +67,6 @@ Installing toolchain:
         make -j$(nproc) -DPREFIX=$HOME/icestorm
         make            -DPREFIX=$HOME/icestorm install
         ```
-    Note that latest Ubuntu already has necessary packages: 
-    ```
-    sudo apt-get install -y fpga-icestorm yosys arachne-pnr
-    ```
 2. [CλaSH](http://www.clash-lang.org/) compiler based on [GHC](https://www.haskell.org/ghc/):
     * To install GHC and Cabalon Linux:
 
